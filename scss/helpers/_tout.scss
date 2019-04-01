@@ -1,0 +1,19 @@
+// Base tout styles that are used on all touts.
+
+.tout {
+  margin-bottom: 1.75rem;
+  padding: 8% 4%;
+  box-shadow: 2px 2px 50px $color--drop-shadow;
+  @include breakpoint($medium) {
+  	padding: 6% 8%;
+  }
+}
+
+.tout__heading {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  @include breakpoint($medium) {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+  }
+}

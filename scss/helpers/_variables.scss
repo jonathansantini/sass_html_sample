@@ -1,0 +1,51 @@
+// variables
+
+// breakpoints
+$small: 320px;
+$medium: 768px;
+$medium-large: 950px;
+$large: 1200px;
+$xlarge: 1600px;
+
+// colors
+$color--white: #fff !default;
+$color--slight-off-white: #fefefe;
+$color--black: #363636 !default;
+$color--black-blue: #0a202d !default; // @todo I know there is a better name. Will change.
+$color--gray: #949598 !default;
+$color--light-gray: #D4D4D5 !default;
+$color--lighter-gray: #f5f5f5 !default;
+$color--red: #ca171b !default;
+$color--blue: #005B7F !default;
+$color--dark-blue: #082E41 !default;
+$color--light-blue: #88C2D3 !default;
+$color--green: #99C455 !default;
+$color--brown: #A69C95 !default;
+$color--orange: #f69536 !default;
+
+$color--black-trans: rgba(21, 33, 0, 0.7);
+
+$color--error: $color--red;
+$color--link: $color--white;
+$color--drop-shadow: #ccc;
+
+// buttons
+$color--button: $color--white;
+$color--button-hover: $color--light-blue;
+$color--button-border: $color--light-blue;
+$color--button-background: $color--light-blue;
+
+$color--button-reverse: $color--white;
+$color--button-reverse-hover: $color--light-blue;
+
+$color--button-disable: $color--gray;
+
+$color--button-image: $color--dark-blue;
+
+
+// site settings
+$max-width: 1350px;
+$min-width: 320px;
+
+// S3
+$img_path: 'https://s3.amazonaws.com/timberlinefinancial/';

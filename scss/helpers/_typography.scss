@@ -1,0 +1,240 @@
+// typography
+
+// Document level adjustments
+:root {
+  font-size: 18px;
+}
+
+html {
+  font-size: 18px; //1rem
+  -webkit-font-smoothing: antialiased;
+}
+
+$font--serif: 'Vidaloka', serif;
+$font--sans-serif: 'Raleway', sans-serif;
+$font--serif-text: 'Source Serif Pro', serif;
+
+// https://offroadcode.com/rem-calculator
+// base 18px
+
+//  font-size: 4.278rem; // 77px
+//  font-size: 3.333rem; // 60px
+//  font-size: 3.056rem; // 55px
+//  font-size: 2rem; // 36px
+//  font-size: 1.667rem; // 30px
+//  font-size: 1.333rem; // 24px
+//  font-size: 1.111rem; // 20px
+//  font-size: 0.7778rem; // 14px
+
+@mixin text {
+  font-family: $font--sans-serif;
+}
+
+@mixin text-serif {
+  font-family: $font--serif-text;
+}
+
+@mixin text--small {
+  @include text;
+  font-size: 0.75rem; // 15.75px
+  @include breakpoint($medium) {
+    font-size: 0.875rem; // 9px
+  }
+}
+
+@mixin text--small-serif {
+  @include text-serif;
+  font-size: 0.75rem; // 15.75px
+  @include breakpoint($medium) {
+    font-size: 0.875rem; // 9px
+  }
+}
+
+@mixin text--medium {
+  @include text;
+  font-size: 0.875rem; // 15.75px
+  @include breakpoint($medium) {
+    font-size: 1rem; // 18px
+  }
+}
+
+@mixin text--medium-serif {
+  @include text-serif;
+  font-size: 0.875rem; // 15.75px
+  @include breakpoint($medium) {
+    font-size: 1rem; // 18px
+  }
+}
+
+@mixin text--large {
+  @include text;
+  font-size: 1rem; // 18px
+  @include breakpoint($medium) {
+    font-size: 1.25rem; // 22.5px
+  }
+}
+
+@mixin text--large-serif {
+  @include text-serif;
+  font-size: 1rem; // 18px
+  @include breakpoint($medium) {
+    font-size: 1.25rem; // 22.5px
+  }
+}
+
+@mixin text--xlarge {
+  @include text;
+  font-size: 1.25rem; // 18px
+  @include breakpoint($medium) {
+    font-size: 1.875rem; // 33.75px
+  }
+}
+
+@mixin text--xlarge-serif {
+  @include text-serif;
+  font-size: 1.25rem; // 18px
+  @include breakpoint($medium) {
+    font-size: 1.875rem; // 33.75px
+  }
+}
+
+@mixin text--xxlarge {
+  @include text;
+  font-size: 1.875rem; // 33.75px
+  @include breakpoint($medium) {
+    font-size: 2rem; // 38px
+  }
+}
+
+%text--small,
+.text--small {
+  @include text--small;
+}
+
+%text--medium,
+.text--medium {
+  @include text--medium;
+}
+
+%text--large,
+.text--large {
+  @include text--large;
+}
+
+%text--xlarge,
+.text--xlarge {
+  @include text--xlarge;
+}
+
+body {
+  @extend %text--large;
+}
+
+@mixin header {
+  font-family: $font--serif;
+  font-weight: 100;
+  padding: 0;
+  margin: 0 0 10px 0;
+  @include breakpoint($medium) {
+    letter-spacing: 0.025em;
+    margin: 0 0 20px 0;
+  }
+}
+
+.h1,
+%h1 {
+  @include header;
+  font-size: 3.438rem; // 55px
+  @include breakpoint($medium) {
+    font-size: 4.813rem; // 77px
+  }
+}
+.h2,
+%h2 {
+  @include header;
+  font-size: 2.25rem; // 36px
+  @include breakpoint($medium) {
+    font-size: 3.75rem; // 60px
+  }
+}
+.h3,
+%h3 {
+  @include header;
+  font-size: 1.875rem; // 30px
+  @include breakpoint($medium) {
+    font-size: 2.25rem; // 36px
+  }
+}
+.h4,
+%h4 {
+  @include header;
+  font-size: 1.5rem; // 24px
+  @include breakpoint($medium) {
+    font-size: 1.875rem; // 30px
+  }
+}
+.h5,
+%h5 {
+  @include header;
+  font-size: 0.875rem; // 14px
+  @include breakpoint($medium) {
+    font-size: 1.5rem; // 24px
+  }
+}
+.h6,
+%h6 {
+  @include header;
+  font-size: 0.75rem; // 12px
+  @include breakpoint($medium) {
+    font-size: 0.875rem; // 14px
+  }
+}
+
+h1 { @extend %h1; }
+h2 { @extend %h2; }
+h3 { @extend %h3; }
+h4 { @extend %h4; }
+h5 { @extend %h5; }
+h6 { @extend %h6; }
+
+// Links
+a {
+  color: $color--blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color--light-blue;
+  text-decoration: underline;
+}
+
+// Lists
+ol, ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.circle {
+  list-style: circle inside;
+}
+ol.disc {
+  list-style: decimal inside;
+}
+ol.disc ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+ul.circle ul,
+ul.circle ol,
+ol.disc ol,
+ol.disc ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+ul.circle,
+ol.disc {
+  li {
+    margin-bottom: 1rem;
+  }
+}

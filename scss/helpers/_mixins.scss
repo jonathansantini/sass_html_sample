@@ -1,0 +1,64 @@
+// mixins
+
+//breakpoints
+@mixin breakpoint($point) {
+  @if $point == xlarge {
+    @media (min-width: $xlarge) { @content ; }
+  }
+  @else if $point == large {
+    @media (min-width: $large) { @content ; }
+  }
+  @else if $point == medium {
+    @media (min-width: $medium) { @content ; }
+  }
+  @else if $point == small {
+    @media (min-width: $small)  { @content ; }
+  }
+  @else {
+    @media (min-width: $point)  { @content ; }
+  }
+}
+
+// clearfix
+@mixin clearfix {
+  overflow: hidden;
+}
+
+@mixin pie-clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// transitions
+@mixin transition() {
+  transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -webkit-transition:all .3s ease-in-out;
+}
+
+@mixin radius($radius) {
+  -webkit-border-radius: $radius+px;
+  -moz-border-radius: $radius+px;
+  -ms-border-radius: $radius+px;
+  border-radius: $radius+px;
+}
+
+@mixin rotate($radius) {
+  -webkit-transform: rotate($radius);
+  -moz-transform: rotate($radius);
+  -ms-transform: rotate($radius);
+  -o-transform: rotate($radius);
+  transform: rotate($radius);
+}
+
+@mixin skewX($radius) {
+  -webkit-transform: skewX($radius);
+  -moz-transform: skewX($radius);
+  -ms-transform: skewX($radius);
+  -o-transform: skewX($radius);
+  transform: skewX($radius);
+}

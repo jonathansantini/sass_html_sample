@@ -1,0 +1,256 @@
+.tout-options-cloud__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tout-options-cloud__title {
+  line-height: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.tout-options-cloud__title--start {
+  @include text--xlarge;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tout-options-cloud__anchor {
+  top: -100px;
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+
+.tout-options-cloud__img {
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 15rem;
+}
+
+.tout-options-cloud__subheader {
+  @include text--large;
+  margin: 0 auto;
+  @include breakpoint($medium) {
+    max-width: 60%;
+  }
+}
+
+// cloud option menu
+.tout-options-cloud__options {
+  margin-bottom: 3rem;
+  @include breakpoint($medium) {
+    margin-bottom: 2rem;
+  }
+}
+
+.cloud-menu {
+  @include breakpoint($medium) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.cloud-menu__item {
+  list-style-type: disc;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  @include breakpoint($medium) {
+    list-style-type: none;
+    text-align: center;
+    max-width: 8rem;
+  }
+}
+
+.cloud-menu__img {
+  width: 100%;
+  display: block;
+
+  .active & {
+    display: none;
+  }
+}
+
+.cloud-menu__img--alt {
+  width: 100%;
+  display: none;
+  .active & {
+    display: block;
+  }
+}
+
+.cloud-menu__link {
+  display: none;
+  &.active,
+  &:hover {
+    @include breakpoint($medium) {
+      background-color: $color--dark-blue;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  @include breakpoint($medium) {
+    padding: 2rem;
+    display: inline-block;
+    box-shadow: 1px 1px 15px $color--black-trans;
+    border-radius: 8rem;
+  }
+
+  // control hover of the menu images
+  &:hover .cloud-menu__img {
+    @include breakpoint($medium) {
+      display: none;
+    }
+  }
+
+  &:hover .cloud-menu__img--alt {
+    @include breakpoint($medium) {
+      display: block;
+    }
+  }
+}
+
+.cloud-menu__link--anchor {
+  display: block;
+  @include breakpoint($medium) {
+    display: none;
+  }
+}
+
+.cloud-menu__name {
+  @include text--large;
+  font-weight: 700;
+  color: $color--dark-blue;
+  cursor: pointer;
+  display: none;
+
+  @include breakpoint($medium) {
+    display: block;
+    margin: 2rem 0;
+  }
+}
+
+// cloud option info area
+.cloud-info__item {
+  display: block;
+  @include breakpoint($medium) {
+    display: none;
+  }
+  &.active {
+    @include breakpoint($medium) {
+      display: block;
+    }
+  }
+}
+
+.cloud-info__anchor {
+  top: -850px;
+  position: relative;
+  visibility: hidden;
+  display: block;
+  @include breakpoint($large) {
+    top: -725px;
+  }
+  @include breakpoint($xlarge) {
+    top: -425px;
+  }
+}
+
+.cloud-info__title {
+  @include text--xlarge;
+  font-weight: 700;
+}
+
+.cloud-info__desc {
+  margin-bottom: 2rem;
+}
+
+.cloud-info__desc dt {
+  @include text--large-serif;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  @include breakpoint($medium) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.cloud-info__desc dd {
+  @include text--large-serif;
+  display: list-item;
+  list-style-type: disc;
+  margin: 0 0 .5rem 1.25rem;
+  @include breakpoint($medium) {
+    @include text--large-serif;
+  }
+}
+
+.cloud-info__desc p {
+  @include text--large-serif;
+  line-height: 1.5rem;
+  @include breakpoint($medium) {
+    line-height: 1.8rem;
+  }
+}
+
+.cloud-info__benefits {
+  margin-bottom: 2rem;
+  @include breakpoint($medium) {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+}
+
+.cloud-info__top {
+  margin-bottom: 2rem;
+  @include breakpoint($medium) {
+    display: none;
+  }
+}
+
+.benefits-info__header {
+  @include text--large;
+  font-weight: 700;
+}
+
+.benefits-info__pros {
+  width: 100%;
+  margin-bottom: 2rem;
+  @include breakpoint($medium) {
+    padding-right: 2rem;
+    margin-bottom: 0;
+    width: 50%;
+  }
+}
+
+.benefits-info__cons {
+  width: 100%;
+  margin-bottom: 2rem;
+  @include breakpoint($medium) {
+    padding-right: 2rem;
+    margin-bottom: 0;
+    width: 50%;
+  }
+}
+
+.benefits-info__item {
+  @include text--large-serif;
+  list-style-type: disc;
+  margin: 0 0 .5rem 1.25rem;
+}
+
+// buttons area
+.tout-options-cloud__buttons {
+  display: none;
+  @include breakpoint($medium) {
+    display: block;
+  }
+}
+
+.tout-options-cloud__next {
+  float: right;
+}
